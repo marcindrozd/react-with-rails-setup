@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 40
+
+development:
+  <<: *default
+  database: ingredients_development
+
+test:
+  <<: *default
+  database: ingredients_test
+
+production:
+  <<: *default
+  database: ingredients
